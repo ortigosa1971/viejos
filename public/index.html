@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Histórico PWS · Weather</title>
+  <!-- NO ponemos meta CSP aquí; la servimos por cabecera con Helmet -->
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 2rem; }
+    h1 { margin-top: 0; }
+    .row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    label { display: inline-flex; align-items: center; gap: .5rem; }
+    input[type="text"], input[type="date"] { padding: .4rem .6rem; }
+    button { padding: .5rem .8rem; cursor: pointer; }
+    table { margin-top: 1rem; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: .35rem .5rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    #status { margin-top: .6rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Histórico PWS</h1>
+  <div class="row">
+    <label>ID estación <input id="stationId" type="text" placeholder="p.ej. IXXXXXXX" /></label>
+    <label>Fecha <input id="date" type="date" /></label>
+    <label><input type="radio" name="units" value="m" checked /> Métrico</label>
+    <label><input type="radio" name="units" value="e" /> Imperial</label>
+    <button id="loadBtn">Cargar</button>
+    <button id="csvBtn">CSV</button>
+  </div>
+  <div id="status"></div>
+  <table id="table"></table>
+  <script src="./app.js"></script>
+</body>
+</html>

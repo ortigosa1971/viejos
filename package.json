@@ -1,7 +1,7 @@
 {
-  "name": "viejo-fixed",
+  "name": "viejo-fixed-helmet",
   "version": "1.0.0",
-  "description": "Weather Underground PWS history proxy + frontend",
+  "description": "Weather Underground PWS history proxy + frontend (Helmet CSP)",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.0",
-    "express": "^4.19.0"
+    "express": "^4.19.0",
+    "helmet": "^7.1.0"
   }
 }
